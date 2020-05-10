@@ -19,7 +19,8 @@ defmodule SpotifunWeb.Router do
     get "/", PageController, :index
   end
 
-  get "/spotify_login_url", SpotifunWeb.AuthController, :get_spotify_login_url
+  get "/spotify_login_url", SpotifunWeb.SpotifyController, :get_login_url
+  get "/artists", SpotifunWeb.SpotifyController, :get_favorite_artists
 
   # Other scopes may use custom stacks.
   # scope "/api", SpotifunWeb do
