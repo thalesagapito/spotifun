@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 export default {
   mode: "universal",
   server: {
@@ -17,7 +19,13 @@ export default {
         content: process.env.npm_package_description || "",
       },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;900&display=swap",
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -39,6 +47,7 @@ export default {
     "@nuxtjs/eslint-module",
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     "@nuxtjs/tailwindcss",
+    "@nuxtjs/dotenv",
   ],
   /*
    ** Nuxt.js modules

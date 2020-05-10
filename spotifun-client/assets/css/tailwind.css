@@ -3,3 +3,8 @@
 @import 'tailwindcss/components';
 /* purgecss end ignore */
 @import 'tailwindcss/utilities';
+
+html, body {
+  @apply font-sans;
+  /* background-image: linear-gradient(-20deg, #fe8b9e 30%, #ffc6a3 100%); */
+}
